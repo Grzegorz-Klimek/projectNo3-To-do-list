@@ -1,2 +1,9 @@
-$fontColor = #000;
-$fontColorLighter = lighten($fontColor, 20%);
+$small: 'only screen and (min-width: 768px)';
+$medium: 'only screen and (min-width: 992px)';
+$large: 'only screen and (min-width: 1200px)';
+
+$colorBackground: #f1f1f1;
+$colorAccent: #7a0000;
+$colorFont: #333;
+$colorFontLighter: lighten($colorFont, 40%);
+$colorHeader: #eee;

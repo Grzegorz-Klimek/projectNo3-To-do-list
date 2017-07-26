@@ -1,9 +1,127 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 
-.container {
-  margin: 0 auto;
-  text-align: center;
+body {
+  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png);
+  font-family: 'Roboto', sans-serif;
+}
+
+.product-list {
+  @include shadow-box();
+  position: relative;
+  margin: auto;
+  margin-top: 5em;
+  background-color: $colorBackground;
+  width: 70%;
+  @media #{$small} {
+    width: 60%;
+  }
+  @media #{$medium} {
+    width: 50%;
+  }
+  @media #{$large} {
+    width: 30%;
+  }
+  img {
+    position: absolute;
+    width: 50px;
+    top: -1em;
+    left: 0;
+  }
+
+  h1 {
+    background-color: $colorAccent;
+    color: $colorHeader;
+    padding: 1em 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.3em;
+    margin: 0;
+    text-align: center;
+    .fa-cutlery {
+      margin-right: 0.5em ;
+    }
+    .fa-plus-circle {
+      position: absolute;
+      top: -0.5em;
+      right: -0.5em;
+      font-size: 1.5em;
+      padding: 0.3em;
+      border-radius: 100%;
+      transition: all 0.3s;
+      color: $colorHeader;
+      background-color: $colorAccent;
+      &:hover {
+        cursor: pointer;
+        background-color: $colorHeader;
+        color: $colorAccent;
+      }
+    }
+  }
+  input {
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    padding: 1em 0;
+    outline: none;
+    border: none;
+    background-color: lighten($colorAccent, 10%);
+    color: $colorHeader;
+    font-size: 1em;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      background-color: lighten($colorAccent, 20%);
+    }
+    &:focus {
+      background-color: lighten($colorAccent, 25%);
+    }
+  }
   ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      background-color: #fff;
+      color: $colorFont;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.1em;
+      transition: all 0.2s;
+      font-family: 'Kalam', cursive;
+      &:nth-child(2n) {
+        background-color: $colorBackground;
+      }
+      span {
+        color: $colorHeader;
+        background-color: $colorAccent;
+        display: inline-block;
+        height: 50px;
+        opacity: 0;
+        width: 0;
+        font-size: 1.4em;
+        margin-right: 25px;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover {
+          color: lighten($colorHeader, 20%);
+          background-color: lighten($colorAccent, 10%);
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: darken($colorBackground, 5%);
+        span {
+          width: 50px;
+          opacity: 1;
+        }
+      }
+    }
   }
+}
+
+.product-bought {
+  color: $colorFontLighter !important;
+  text-decoration: line-through;
 }
