@@ -1,0 +1,107 @@
+body {
+  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png);
+  font-family: 'Roboto', sans-serif; }
+
+.product-list {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.23);
+  position: relative;
+  margin: auto;
+  margin-top: 5em;
+  background-color: #f1f1f1;
+  width: 70%; }
+  @media only screen and (min-width: 768px) {
+    .product-list {
+      width: 60%; } }
+  @media only screen and (min-width: 992px) {
+    .product-list {
+      width: 50%; } }
+  @media only screen and (min-width: 1200px) {
+    .product-list {
+      width: 30%; } }
+  .product-list img {
+    position: absolute;
+    width: 50px;
+    top: -1em;
+    left: 0; }
+  .product-list h1 {
+    background-color: #7a0000;
+    color: #eee;
+    padding: 1em 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.3em;
+    margin: 0;
+    text-align: center; }
+    .product-list h1 .fa-cutlery {
+      margin-right: 0.5em; }
+    .product-list h1 .fa-plus-circle {
+      position: absolute;
+      top: -0.5em;
+      right: -0.5em;
+      font-size: 1.5em;
+      padding: 0.3em;
+      border-radius: 100%;
+      transition: all 0.3s;
+      color: #eee;
+      background-color: #7a0000; }
+      .product-list h1 .fa-plus-circle:hover {
+        cursor: pointer;
+        background-color: #eee;
+        color: #7a0000; }
+  .product-list input {
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    padding: 1em 0;
+    outline: none;
+    border: none;
+    background-color: #ad0000;
+    color: #eee;
+    font-size: 1em;
+    cursor: pointer;
+    display: none; }
+    .product-list input:hover {
+      background-color: #e00000; }
+    .product-list input:focus {
+      background-color: #fa0000; }
+  .product-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .product-list ul li {
+      background-color: #fff;
+      color: #333;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.1em;
+      transition: all 0.2s;
+      font-family: 'Kalam', cursive; }
+      .product-list ul li:nth-child(2n) {
+        background-color: #f1f1f1; }
+      .product-list ul li span {
+        color: #eee;
+        background-color: #7a0000;
+        display: inline-block;
+        height: 50px;
+        opacity: 0;
+        width: 0;
+        font-size: 1.4em;
+        margin-right: 25px;
+        text-align: center;
+        transition: all 0.3s; }
+        .product-list ul li span:hover {
+          color: white;
+          background-color: #ad0000; }
+      .product-list ul li:hover {
+        cursor: pointer;
+        background-color: #e4e4e4; }
+        .product-list ul li:hover span {
+          width: 50px;
+          opacity: 1; }
+
+.product-bought {
+  color: #999999 !important;
+  text-decoration: line-through; }
+
+/*# sourceMappingURL=main.css.map */
